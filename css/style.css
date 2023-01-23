@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "Pacifico";
+    src: url(../fonts/Pacifico-Regular.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: "Shrikhand";
+    src: url(../fonts/Shrikhand-Regular.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: "DenkOne";
+    src: url(../fonts/DenkOne-Regular.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: "CoveredByYourGrace";
+    src: url(../fonts/CoveredByYourGrace-Regular.ttf) format(truetype);
+}
+
+body {
+   min-height: 100vh; 
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin: 0;
+}
+
+.header {
+    background-color: #300104e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    flex-grow: 1;
+    
+}
+
+.header h1 {
+    font-family: "Pacifico", sans-serif;
+    color: #c2847a;
+    font-size: 45px;
+    font-weight: 100;
+    animation: slide 0.2 forwards;
+    align-self: center;
+}
+
+.game-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem 0rem 1rem 0rem;
+    flex-grow: 1;
+    background-color: #848586;
+    min-height: 600px;
+}
+
+.game-content .options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 40vh;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.game-content .options img {
+    height: 155px;
+    width: 155px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.game-content .paper-section img {
+    height: 180px;
+    width: 180px;
+    border-radius: 60px;
+    transition: 0.5s;
+}
+
+.game-content h2{
+    font-family: "Shrikhand", sans-serif;
+    color: #300104e5;
+    font-size: 30px;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+}
+
+.hovering {
+    transform :scale(1.1);
+    box-shadow: 0 0 1rem #000000af;
+}
+
+.Score {
+    font-family: "DenkOne", sans-serif;
+    margin-top: 2px;
+    margin-bottom: 0.1rem;
+    font-size: 30px;
+    color: #ffbd62;
+}
+
+.Selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #8998a7;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: 800;
+    border: 5px solid #c2847a ;
+}
+
+.round-result {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-family: "coveredByYourGrace", sans-serif;
+    padding: 1rem;
+    background-color: #baa898;
+    max-width: fit-content;
+    border-radius: 20px;
+    color: #300104e5;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    min-height: 75px;
+    background-color: #280003;
+}
+
+.footer a {
+    font-size: 20px;
+    color: #5A6C7F;
+    font-weight: 800;
+}

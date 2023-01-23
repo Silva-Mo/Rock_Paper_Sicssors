@@ -1,10 +1,44 @@
+const options = document.querySelector('.options');
 const rock = document.querySelector('.Rock');
 const paper = document.querySelector('.Paper');
 const scissors = document.querySelector('.Scissors');
+const bod = document.querySelector('body');
+const audio = document.querySelector('audio');
+const gameContent = document.querySelector('.game-content')
+const divOfScores = document.querySelector('.Score');
+
+const divOfSelection = document.createElement('div');
+divOfSelection.classList.add('Selection');
+
+const divOfRoundResult = document.createElement('div');
+divOfRoundResult.classList.add('round-result');
+
+rock.addEventListener('mouseenter', () => {
+    rock.classList.add('hovering')
+})
+paper.addEventListener('mouseenter', () => {
+    paper.classList.add('hovering')    
+})
+scissors.addEventListener('mouseenter', () => {
+    scissors.classList.add('hovering')
+})
+
+rock.addEventListener('mouseleave', () => {
+    rock.classList.remove('hovering')
+})
+paper.addEventListener('mouseleave', () => {
+    paper.classList.remove('hovering')
+})
+scissors.addEventListener('mouseleave', () => {
+    scissors.classList.remove('hovering')
+})
+
 
 rock.addEventListener('click', playRound) 
 paper.addEventListener('click', playRound) 
 scissors.addEventListener('click', playRound)
+
+
 
 
 
@@ -25,56 +59,68 @@ function getComputerChoice() {
 let playerScore = 0;
 let computerScore = 0;
 
-function playRound(e) {
-    let playerSelection = this.classList.value;
-    let computerSelection = getComputerChoice();
 
-    console.log(playerSelection);
-    console.log(computerSelection);
+function playRound(e) {
+    audio.currentTime = 0;
+    audio.play();
+    divOfScores.textContent = `You:${playerScore} - Computer:${computerScore}`;
+    gameContent.insertBefore(divOfSelection,options );
+
+    let classValue = this.classList.value;
+    let computerSelection = getComputerChoice();
+    let splittedClassValue = classValue.split(" ");
+    let playerSelection = splittedClassValue[0];
+    
+    divOfSelection.textContent = `Your Selection was: ${playerSelection}  |  Computer selection was: ${computerSelection}\n`
+    divOfSelection.appendChild(divOfRoundResult);
 
     if (playerSelection === computerSelection) {
-        console.log("Draw");
+        divOfRoundResult.textContent = "Draw";
     }
     else if (playerSelection === "Rock" && computerSelection === "Scissors"){
-        console.log( "Yay ! You Won, Rock beats Scissors");
+        divOfRoundResult.textContent= "Yay ! You Won, Rock beats Scissors";
         playerScore++;
     }
     else if (playerSelection === "Paper" && computerSelection === "Rock"){
-        console.log( "Yay ! You Won, Paper beats Rock");
+        divOfRoundResult.textContent="Yay ! You Won, Paper beats Rock";
         playerScore++;
     }
     else if (playerSelection === "Scissors" && computerSelection === "Paper"){
-        console.log( "Yay ! You Won, Scissors beats Paper");
+        divOfRoundResult.textContent="Yay ! You Won, Scissors beats Paper";
         playerScore++;
     }
     else if (playerSelection === "Scissors" && computerSelection === "Rock"){
-        console.log( "Oh No ! You lost, Rock beats Scissors");
+        divOfRoundResult.textContent="Oh No ! You lost, Rock beats Scissors";
         computerScore++;
     }
     else if (playerSelection === "Paper" && computerSelection === "Scissors"){
-        console.log( "Oh No ! You lost, Scissors beats Paper");
+        divOfRoundResult.textContent="Oh No ! You lost, Scissors beats Paper";
         computerScore++;
     }
     else if (playerSelection === "Rock" && computerSelection === "Paper"){
-        console.log( "Oh No ! You lost, Paper beats Rock");
+        divOfRoundResult.textContent="Oh No ! You lost, Paper beats Rock";
         computerScore++;
     }
     else {
         alert("Something went wrong :(")
     }
-    console.log(playerScore);
-    console.log(computerScore);
-    
+
+   
+
     if (playerScore === 5 && computerScore < 5){
-        alert( "You smashed the computer");
+        divOfRoundResult.textContent= "Congrats! You smashed the computer";
+        divOfScores.textContent = `You:${playerScore} - Computer:${computerScore}`;
         playerScore = 0;
         computerScore = 0;
     }
     else if (playerScore < 5 && computerScore === 5){
-        alert("The computer smashed you !");
+        divOfRoundResult.textContent = "Unfortunately, The computer smashed you :(";
+        divOfScores.textContent = `You:${playerScore} - Computer:${computerScore}`;
         playerScore = 0;
         computerScore = 0;
     }
+    divOfScores.textContent = `You:${playerScore} - Computer:${computerScore}`;
+     
 }
  
 
