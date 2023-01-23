@@ -122,18 +122,15 @@ function playRound(e) {
     divOfScores.textContent = `You:${playerScore} - Computer:${computerScore}`;
      
 }
+
+
+
+// these line of code were used to log the results in the console.
+
+
  
-
-
-
-
-
-
 //     console.log ("Your choice : " + capitalizedPlayer);
 //     console.log ("Copmuter's choice : " + capitalizedComputer);
-
-
-
 
 
 
