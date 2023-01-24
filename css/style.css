@@ -145,7 +145,7 @@ body {
 .score-selection {
     display: flex;
     justify-content: center;
-    column-gap: 6rem;
+    column-gap: 7rem;
     row-gap: 1rem;
     flex-wrap: wrap;
 

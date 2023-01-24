@@ -79,30 +79,30 @@ function playRound(e) {
 
     switch (playerSelection) {
         case "Rock":
-        imgOfPlayerSelection.setAttribute('src', '../imgs/Rock.png')
+        imgOfPlayerSelection.setAttribute('src', 'imgs/Rock.png')
         selectionWithScoresContainer.insertBefore(imgOfPlayerSelection,divOfScores);
         break;
         case "Paper":
-        imgOfPlayerSelection.setAttribute('src', '../imgs/Paper.png')
+        imgOfPlayerSelection.setAttribute('src', 'imgs/Paper.png')
         selectionWithScoresContainer.insertBefore(imgOfPlayerSelection,divOfScores);
         break;
         case "Scissors":
-        imgOfPlayerSelection.setAttribute('src', '../imgs/Scissors.png')
+        imgOfPlayerSelection.setAttribute('src', 'imgs/Scissors.png')
         selectionWithScoresContainer.insertBefore(imgOfPlayerSelection,divOfScores);
         break;
     }
 
     switch (computerSelection) {
         case "Rock":
-        imgOfComputerSelection.setAttribute('src', '../imgs/Rock.png')
+        imgOfComputerSelection.setAttribute('src', 'imgs/Rock.png')
         selectionWithScoresContainer.appendChild(imgOfComputerSelection);
         break;
         case "Paper":
-        imgOfComputerSelection.setAttribute('src', '../imgs/Paper.png')
+        imgOfComputerSelection.setAttribute('src', 'imgs/Paper.png')
         selectionWithScoresContainer.appendChild(imgOfComputerSelection);
         break;
         case "Scissors":
-        imgOfComputerSelection.setAttribute('src', '../imgs/Scissors.png')
+        imgOfComputerSelection.setAttribute('src', 'imgs/Scissors.png')
         selectionWithScoresContainer.appendChild(imgOfComputerSelection);
         break;
     }
