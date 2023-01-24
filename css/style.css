@@ -92,7 +92,7 @@ body {
     box-shadow: 0 0 1rem #000000af;
 }
 
-.Score {
+.score {
     font-family: "DenkOne", sans-serif;
     margin-top: 2px;
     margin-bottom: 0.1rem;
@@ -140,4 +140,20 @@ body {
     font-size: 20px;
     color: #5A6C7F;
     font-weight: 800;
+}
+
+.score-selection {
+    display: flex;
+    justify-content: center;
+    column-gap: 6rem;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+
+}
+
+.selection-img {
+    height: 70px;
+    width: 70px;
+    background-color: #ffbd62;
+    border-radius: 50px;
 }
