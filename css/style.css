@@ -18,6 +18,9 @@
     src: url(../fonts/CoveredByYourGrace-Regular.ttf) format(truetype);
 }
 
+
+
+
 body {
    min-height: 100vh; 
    display: flex;
@@ -31,7 +34,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 150px;
+    min-height: 120px;
     flex-grow: 1;
     
 }
@@ -39,7 +42,7 @@ body {
 .header h1 {
     font-family: "Pacifico", sans-serif;
     color: #c2847a;
-    font-size: 45px;
+    font-size: 37px;
     font-weight: 100;
     animation: slide 0.2 forwards;
     align-self: center;
@@ -66,15 +69,15 @@ body {
 }
 
 .game-content .options img {
-    height: 155px;
-    width: 155px;
+    height: 122px;
+    width: 122px;
     border-radius: 50px;
     transition: 0.5s;
 }
 
 .game-content .paper-section img {
-    height: 180px;
-    width: 180px;
+    height: 144px;
+    width: 144px;
     border-radius: 60px;
     transition: 0.5s;
 }
@@ -82,7 +85,7 @@ body {
 .game-content h2{
     font-family: "Shrikhand", sans-serif;
     color: #300104e5;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: lighter;
     margin-bottom: 2rem;
 }
@@ -101,17 +104,19 @@ body {
 }
 
 .Selection {
+    width: 500px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 7px;
     border-radius: 10px;
     background-color: #8998a7;
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
+    font-size: 19px;
     font-weight: 800;
     border: 5px solid #c2847a ;
 }
@@ -137,8 +142,14 @@ body {
 }
 
 .footer a {
+    gap: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
-    color: #5A6C7F;
+    color: #ffffff;
     font-weight: 800;
 }
 
@@ -156,4 +167,50 @@ body {
     width: 70px;
     background-color: #ffbd62;
     border-radius: 50px;
+}
+@media only screen and (max-width: 600px) {
+    .game-content .options img {
+        height: 60px;
+        width: 60px;
+        border-radius: 50px;
+        transition: 0.5s;
+    }
+    
+    .game-content .paper-section img {
+        height: 70px;
+        width: 70px;
+        border-radius: 60px;
+        transition: 0.5s;
+    }
+    .game-content .options {
+     flex-wrap: nowrap;
+     gap: 7rem;
+    }
+    
+    .header h1 {
+      font-size: 30px;
+    }
+
+    .Selection {
+        width: 290px;
+        height: 150px;
+        font-size: 19px;
+    }
+
+    .selection-img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .score {
+        font-size: 28px;
+    }
+    
+    .footer a {
+        font-size: 18px;
+    }
+}
+
+.footer a img {
+    height: 40px;
 }
