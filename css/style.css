@@ -87,7 +87,7 @@ body {
     color: #300104e5;
     font-size: 25px;
     font-weight: lighter;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .hovering {
@@ -105,7 +105,7 @@ body {
 
 .Selection {
     width: 500px;
-    height: 150px;
+    height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -113,8 +113,8 @@ body {
     padding: 7px;
     border-radius: 10px;
     background-color: #8998a7;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     font-family: 'Times New Roman', Times, serif;
     font-size: 19px;
     font-weight: 800;
@@ -195,6 +195,7 @@ body {
         width: 290px;
         height: 150px;
         font-size: 19px;
+        gap: 0;
     }
 
     .selection-img {
@@ -203,11 +204,14 @@ body {
     }
 
     .score {
-        font-size: 28px;
+        font-size: 33px;
     }
     
     .footer a {
         font-size: 18px;
+    }
+    .round-result {
+        margin-top: 13px;
     }
 }
 
